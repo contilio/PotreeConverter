@@ -1,4 +1,7 @@
-FROM ubuntu:15.10
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/London
 
 RUN apt-get update && apt-get install -y g++ git cmake libboost-all-dev
 RUN mkdir /data
